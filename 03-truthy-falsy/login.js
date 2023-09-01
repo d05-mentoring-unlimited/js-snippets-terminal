@@ -28,9 +28,6 @@ else {
   console.log("Email PW Kombi passt nicht!");
 }
 
-// check for valid email
-// regular expression
-
 // ternary variant
 // console.log(
 //   emailUserInput === emailValid && pwUserInput === pwValid
