@@ -19,7 +19,7 @@ console.log(undefined && "b"); // undefined
 console.log(0 || 0) // 0 (returns first truthy item, otherwise the last item in the list)
 console.log(1 || 0) // 1
 console.log(0 || 1) // 1
-console.log(0 || 2 || 1) // 2
+console.log(0 || 2 || 1) // 2 => 2 is the first truthy item. logical OR does not check the rest and returns the first truthy item right away 
 console.log(0 || "" || undefined) // undefined => all items are not truthy, so the last item is returned / logged
 // console.log(0 || 1)
 // console.log("a" || "b");
