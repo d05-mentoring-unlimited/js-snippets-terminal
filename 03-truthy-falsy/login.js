@@ -2,7 +2,7 @@ const emailUserInput = "rob@rob.rob";
 const pwUserInput = "pw123";
 
 const emailValid = "rob@rob.rob";
-const pwValid = "pw12";
+const pwValid = "pw456";
 
 // check if login data correct
 
