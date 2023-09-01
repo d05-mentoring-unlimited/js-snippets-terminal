@@ -15,9 +15,11 @@ console.log("" && "b");
 console.log(undefined && "b");
 
 // logical OR
-console.log(0 || 0) // 0
+// returns a TRUTHY expression, if at least ONE of the items is truthy
+console.log(0 || 0) // 0 (returns first truthy item, otherwise the last item in the list)
 console.log(1 || 0) // 1
 console.log(0 || 1) // 1
 console.log(0 || 2 || 1) // 2
+console.log(0 || "" || undefined) // undefined => all items are not truthy, so the last item is returned / logged
 // console.log(0 || 1)
 // console.log("a" || "b");
