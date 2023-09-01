@@ -11,8 +11,8 @@ console.log(1 && 3 && 2); // 2 (=> logical and checks in sequence if all values 
 
 console.log("a" && "b"); // b
 console.log(0 && "b"); // 0
-console.log("" && "b");
-console.log(undefined && "b");
+console.log("" && "b"); // ""
+console.log(undefined && "b"); // undefined
 
 // logical OR
 // returns a TRUTHY expression, if at least ONE of the items is truthy
