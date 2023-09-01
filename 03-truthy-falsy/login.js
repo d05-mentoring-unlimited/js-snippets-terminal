@@ -1,8 +1,8 @@
 const emailUserInput = "rob@rob.rob";
-const pwUserInput = "pw12";
+const pwUserInput = "pw123";
 
 const emailValid = "rob@rob.rob";
-const pwValid = "pw123";
+const pwValid = "pw12";
 
 // check if login data correct
 
@@ -16,20 +16,23 @@ if (emailUserInput === emailValid && pwUserInput === pwValid) {
   i.toString();
 }
 // check if all fields are filled out (=not empty strings)
-else if (???) {
+else if(!emailUserInput || !pwUserInput) {
   console.log("Bitte alle Felder ausfüllen");
 }
 // check if email has less than 8 characters
-else if (???) {
+else if(emailUserInput.length < 8) {
   console.log("Email muss mindestens 8 Zeichen haben");
 } 
 // check if pw has less than 5 characters
-else if (???) {
+else if (pwUserInput.length < 5) {
   console.log("PW muss mindestens 5 Zeichen haben");
 } 
 else {
   console.log("Email PW Kombi passt nicht!");
 }
+
+// check for valid email
+// regular expression
 
 // ternary variant
 // console.log(
