@@ -4,7 +4,7 @@
 
 console.log(0 && 0); // 0
 
-console.log(0 && 1); // 0 (=> if first item is not truthy, logical does not even check the next item. it returns the first found "falsy" item => 0)
+console.log(0 && 1); // 0 (=> if first item is not truthy, logical AND does not even check the next item. it returns the first found "falsy" item => 0)
 console.log(1 && 1); // 1
 console.log(1 && 2); // 2 (=> logical and checks in sequence if all values are truthy and returns last truthy value)
 console.log(1 && 3 && 2); // 2 (=> logical and checks in sequence if all values are truthy and returns last truthy value)
