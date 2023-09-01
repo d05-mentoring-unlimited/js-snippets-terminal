@@ -11,9 +11,6 @@ const pwValid = "pw456";
 // 2) true && false ==> false
 if (emailUserInput === emailValid && pwUserInput === pwValid) {
   console.log("Ja! Das passt! Komme gerne herein!");
-  let i = 0;
-  i++;
-  i.toString();
 }
 // check if all fields are filled out (=not empty strings)
 else if(!emailUserInput || !pwUserInput) {
