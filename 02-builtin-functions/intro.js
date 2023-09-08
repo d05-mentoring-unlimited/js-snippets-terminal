@@ -12,13 +12,14 @@ console.log(str.includes("HAW")); // false
 // Pizza Hawaii => pizza hawaii
 // Search term: HAW => haw
 const searchTerm = "HaW";
-console.log(str.toLowerCase())
-console.log(searchTerm.toLowerCase())
+console.log(str.toLowerCase()) // haw
+console.log(searchTerm.toLowerCase()) // HAW
 
 
 // function chaining
-console.log(str.toLowerCase().includes(searchTerm.toLocaleLowerCase()))
-console.log(str.toUpperCase().includes(searchTerm.toUpperCase()))
+console.log(str.toLowerCase().includes(searchTerm.toLocaleLowerCase())) // true
+console.log(str.toUpperCase().includes(searchTerm.toUpperCase())) // true
+
 // Pizza Hawaii => "pizza hawaii".includes("haw")
 // Pizza Hawaii => "PIZZA HAWAII".includes("HAW")
 
