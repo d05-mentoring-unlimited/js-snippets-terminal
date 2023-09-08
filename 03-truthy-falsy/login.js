@@ -2,7 +2,7 @@ const emailUserInput = "rob@rob.rob";
 const pwUserInput = "pw123";
 
 const emailValid = "rob@rob.rob";
-const pwValid = "pw12";
+const pwValid = "pw456";
 
 // check if login data correct
 
@@ -11,9 +11,6 @@ const pwValid = "pw12";
 // 2) true && false ==> false
 if (emailUserInput === emailValid && pwUserInput === pwValid) {
   console.log("Ja! Das passt! Komme gerne herein!");
-  let i = 0;
-  i++;
-  i.toString();
 }
 // check if all fields are filled out (=not empty strings)
 else if(!emailUserInput || !pwUserInput) {
@@ -30,9 +27,6 @@ else if (pwUserInput.length < 5) {
 else {
   console.log("Email PW Kombi passt nicht!");
 }
-
-// check for valid email
-// regular expression
 
 // ternary variant
 // console.log(

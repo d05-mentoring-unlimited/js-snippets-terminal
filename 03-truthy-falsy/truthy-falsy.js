@@ -1,12 +1,6 @@
-const benjaminIsAdmin = false
+const meineVar = "hallo"
 
-let meineVar = NaN // undefined
-console.log(meineVar)
-
-// empty value => meineVaring => "", number: 0, 
-
-// "hallo" == true
-if(benjaminIsAdmin) {
+if(meineVar) {
   console.log("meineVar ist truthy");
   // redirect me to admin page
 }
@@ -15,8 +9,7 @@ else {
   // show error message that user no rights to pass
 }
 
-
-// console.log(meineVar === true);
+// console.log(meineVar === true); // false!
 // const comparison = meineVar == true; // comparison => always returns us back a BOOLEAN
 // console.log(comparison);
 
