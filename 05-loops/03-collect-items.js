@@ -8,11 +8,10 @@ const pizzas = [
   "Hawaii", // i = 6
 ];
 
-
 // Hawaii => haW
 // hawaii => haw
 
-const searchMatches = []
+const searchMatches = [];
 search = "w"; // USER INPUT
 
 // case insensitive search
