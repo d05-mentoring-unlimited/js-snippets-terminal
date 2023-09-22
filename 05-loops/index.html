@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .pizza {
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+      width: 100px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+<!-- in reality items kommen von DATABASE -->
+<!-- in DATABASE: Pizza items sind in ARRAY -->
+  
+  <!-- <div class="pizza">Hawaii</div>
+  <div class="pizza">Funghi</div>
+  <div class="pizza">Salami</div> -->
+
+  <script>
+
+    console.log("JS works! I can code here, amazing!")
+    const pizzas = [
+        "Margherita", // i= 0
+        "Salami", // i = 1
+        "Brokkoli", // i = 2
+        "Mista", // i = 3
+        "Diavolo", // i = 4
+        "Funghi", // i = 5
+        "Hawaii", // i = 6
+      ];
+    const pizzaImages = [
+      'https://source.unsplash.com/100x100/?pizza,margherita',
+      'https://source.unsplash.com/100x100/?pizza,salami',
+      'https://source.unsplash.com/100x100/?pizza,brokkoli',
+      'https://source.unsplash.com/100x100/?pizza,mista',
+      'https://source.unsplash.com/100x100/?pizza,diavolo',
+      'https://source.unsplash.com/100x100/?pizza,funghi',
+      'https://source.unsplash.com/100x100/?pizza,hawaii',
+    ]
+
+      // loope durch die pizzen im array
+    for(let i=0; i<pizzas.length; i++) {
+      const pizzaName = pizzas[i]
+      const pizzaImage = pizzaImages[i]
+
+      const htmlPizza = `<div class='pizza'> 
+        <img src='${pizzaImage}'' />
+        <div>${pizzaName}</div>
+       </div>`
+      console.log(htmlPizza)
+      // füge HTML string ans Ende des BODY des documents ein
+      document.body.innerHTML += htmlPizza
+    }
+
+  </script>
+
+</body>
+</html>
