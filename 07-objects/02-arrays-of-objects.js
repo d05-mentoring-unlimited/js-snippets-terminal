@@ -64,7 +64,7 @@ const pizzas = [
 ];
 
 // loope durch pizzas array
-// und mach was mit jeder pizza
+// und extracte von jeder Pizza den "name" => und packe name in einen neuen Array
 const pizzaNames = [] 
 for(let pizza of pizzas) {
   // console.log(pizza.name)
@@ -72,18 +72,20 @@ for(let pizza of pizzas) {
   const name = pizza.name;
   pizzaNames.push(name)
 }
+// Array nur mit Pizza Names. Z.B. für ein Dropdown Menu
 console.log(pizzaNames)
 
+// Umwandlung aller Pizza Names in HTML Option Tags
 let strOptionsTags = ""
 for(let name of pizzaNames) {
   strOptionsTags += `<option>${name}</option>`
   // console.log("<option>" + name + "</option>")
 }
+// wrappe string von options in select tags
 strOptionsTags = "<select>" + strOptionsTags + "</select>"
 console.log(strOptionsTags)
 
-// <select> </select>
-
+// wandel alle Pizza Objects in einen Array von DIV cards um! GEIL!
 let pizzasHtml = []
 for(let pizza of pizzas) {
   pizzasHtml.push(`
