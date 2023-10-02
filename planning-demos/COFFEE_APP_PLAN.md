@@ -1,6 +1,6 @@
 # Coffee machine app
 
-User Stories
+## User Stories
 
 Als ein User will ich...
 - eine Liste von Kaffees sehen (OUTPUT)
@@ -10,16 +10,17 @@ Als ein User will ich...
 - wenn der Betrag reicht, den fu**** Kaffee haben (OUTPUT)
 - wenn der Betrag reicht, will ich mein Wechselgeld haben (OUTPUT)
 - wenn der Betrag nicht reicht, will ich krasse Rejection haben (OUTPUT)
-(- advanced feature: 10% Rabatt bekommen wenn Tag Freitag ist :))
+- (advanced feature: 10% Rabatt bekommen wenn Tag Freitag ist :))
+
 DONE
 
-SZENARIOS:
+## Scenarios
 
 [O] => Output des Programms<br />
 [I] => Input des Users holen<br />
 [OP] => Operation / Berechnung vom Programm (kein Output / Input)<br />
 
-SZENARIO 1:
+### SCENARIO 1
 
 [O] Hier hast du Kaffee: [Crema, Espresso, Latte, Frappuccino]<br />
 [I] Kaffe jetzt, sag mir welchen. User wählt "Crema" (const coffee = "Crema")<br />
@@ -34,7 +35,7 @@ SZENARIO 1:
 DONE
 
 
-SZENARIO 2:
+### SCENARIO 2
 
 [O] Hier hast du Kaffee: [Crema, Espresso, Latte, Frappuccino]<br />
 [I] Kaffe jetzt, sag mir welchen: const coffee = "Flat White"<br />
@@ -42,7 +43,7 @@ SZENARIO 2:
 [O] Fu*k off. Flat White gibt es nicht<br />
 DONE
 
-SZENARIO 3:
+### SCENARIO 3
 
 [O] Hier hast du Kaffee: [Crema, Espresso, Latte, Frappuccino]<br />
 [I] Kaffe jetzt, sag mir welchen: const coffee = "Crema"<br />
@@ -53,9 +54,10 @@ SZENARIO 3:
 [O] Reicht nicht:<br />
    - Ey! F** off. Reicht nicht. Du hattest deine Chance<br />
 [O] Dein Wechselgeld, buddy: 1 EUR<br />
+DONE
 
 
-ALL SZENARIOS:
+### ALL SCENARIOS
 
 [O] Hier hast du Kaffee: [Crema, Espresso, Latte, Frappuccino]<br />
 [I] Kaffe jetzt, sag mir welchen: const coffee = "Crema"<br />
@@ -71,7 +73,7 @@ ALL SZENARIOS:
 [O] Dein Wechselgeld, buddy: amount-coffeePrice EUR<br />
 DONE<br />
 
-PSEUDO CODE:
+## PSEUDO CODE
 
 [O] console.log(Hier hast du Kaffee: [Crema, Espresso, Latte, Frappuccino])<br />
 [I] readline sync => Kaffe jetzt, sag mir welchen (=> const coffee = "Crema")<br />
