@@ -14,71 +14,77 @@ Als ein User will ich...
 DONE
 
 SZENARIOS:
-[O] => Output des Programms
-[I] => Input des Users holen
-[OP] => Operation / Berechnung vom Programm (kein Output / Input)
+
+[O] => Output des Programms<br />
+[I] => Input des Users holen<br />
+[OP] => Operation / Berechnung vom Programm (kein Output / Input)<br />
 
 SZENARIO 1:
-[O] Hier hast du Kaffee: [Crema, Espresso, Latte, Frappuccino]
-[I] Kaffe jetzt, sag mir welchen. User wählt "Crema" (const coffee = "Crema")
-[OP] Checke ob es den Crema im Angebot gibt
-[OP] Checke was der Crema kostet
-[O] Kaffee kostet 1.99 EUR
-[I] 5 EUR (User gibt 5 EUR ein. Wir speichern das: const amount = 5.00)
-[OP] Prüfe ob Betrag reicht. Ja, reicht.
-[OP] Berechne Wechselgeld
-[O] Hier, Kaffee: 🍜
-[O] Dein Wechselgeld, buddy: 3.01 EUR
+
+[O] Hier hast du Kaffee: [Crema, Espresso, Latte, Frappuccino]<br />
+[I] Kaffe jetzt, sag mir welchen. User wählt "Crema" (const coffee = "Crema")<br />
+[OP] Checke ob es den Crema im Angebot gibt<br />
+[OP] Checke was der Crema kostet<br />
+[O] Kaffee kostet 1.99 EUR<br />
+[I] 5 EUR (User gibt 5 EUR ein. Wir speichern das: const amount = 5.00)<br />
+[OP] Prüfe ob Betrag reicht. Ja, reicht.<br />
+[OP] Berechne Wechselgeld<br />
+[O] Hier, Kaffee: 🍜<br />
+[O] Dein Wechselgeld, buddy: 3.01 EUR<br />
 DONE
 
 
 SZENARIO 2:
-[O] Hier hast du Kaffee: [Crema, Espresso, Latte, Frappuccino]
-[I] Kaffe jetzt, sag mir welchen: const coffee = "Flat White"
-[OP] Checke ob es den Flat White im Angebot gibt
-[O] Fu*k off. Flat White gibt es nicht
+
+[O] Hier hast du Kaffee: [Crema, Espresso, Latte, Frappuccino]<br />
+[I] Kaffe jetzt, sag mir welchen: const coffee = "Flat White"<br />
+[OP] Checke ob es den Flat White im Angebot gibt<br />
+[O] Fu*k off. Flat White gibt es nicht<br />
 DONE
 
 SZENARIO 3:
-[O] Hier hast du Kaffee: [Crema, Espresso, Latte, Frappuccino]
-[I] Kaffe jetzt, sag mir welchen: const coffee = "Crema"
-[OP] Checke ob es den Crema im Angebot gibt
-[OP] Checke was der Crema kostet
-[O] Kaffee kostet 1.99 EUR
-[I] User gibt ein: 1 EUR (Wir speichern: const amount = 1.00)
-[O] Reicht nicht:
-   - Ey! F** off. Reicht nicht. Du hattest deine Chance
-[O] Dein Wechselgeld, buddy: 1 EUR
+
+[O] Hier hast du Kaffee: [Crema, Espresso, Latte, Frappuccino]<br />
+[I] Kaffe jetzt, sag mir welchen: const coffee = "Crema"<br />
+[OP] Checke ob es den Crema im Angebot gibt<br />
+[OP] Checke was der Crema kostet<br />
+[O] Kaffee kostet 1.99 EUR<br />
+[I] User gibt ein: 1 EUR (Wir speichern: const amount = 1.00)<br />
+[O] Reicht nicht:<br />
+   - Ey! F** off. Reicht nicht. Du hattest deine Chance<br />
+[O] Dein Wechselgeld, buddy: 1 EUR<br />
 
 
 ALL SZENARIOS:
-[O] Hier hast du Kaffee: [Crema, Espresso, Latte, Frappuccino]
-[I] Kaffe jetzt, sag mir welchen: const coffee = "Crema"
-[OP] Checke ob es den Crema im Angebot gibt
-    WENN NICHT => [O] Gibts nicht! Geht nicht! EXIT
-	Etwas more challenging Variante: Frage solange nach Cofee Name, bis gültiger Kaffename eingegeben [LOOP]
-[OP] Checke was der Crema kostet
-[O] Kaffee kostet 1.99 EUR
-[I] User gibt uns Geld: X EUR => const amount = X    
-    WENN REICHT NICHT => [O] Gibts nicht! Geht nicht! EXIT
-	Etwas more challenging Variante: Hole dir solange GELD, bis Betrag reicht [LOOP]
-[O] Hier, Kaffee: 🍜
-[O] Dein Wechselgeld, buddy: amount-coffeePrice EUR
-DONE
+
+[O] Hier hast du Kaffee: [Crema, Espresso, Latte, Frappuccino]<br />
+[I] Kaffe jetzt, sag mir welchen: const coffee = "Crema"<br />
+[OP] Checke ob es den Crema im Angebot gibt<br />
+    WENN NICHT => [O] Gibts nicht! Geht nicht! EXIT<br />
+	Etwas more challenging Variante: Frage solange nach Cofee Name, bis gültiger Kaffename eingegeben [LOOP]<br />
+[OP] Checke was der Crema kostet<br />
+[O] Kaffee kostet 1.99 EUR<br />
+[I] User gibt uns Geld: X EUR (Wir speichern Input => const amount = X)<br />
+    WENN REICHT NICHT => [O] Gibts nicht! Geht nicht! EXIT<br />
+	Etwas more challenging Variante: Hole dir solange GELD, bis Betrag reicht [LOOP]<br />
+[O] Hier, Kaffee: 🍜<br />
+[O] Dein Wechselgeld, buddy: amount-coffeePrice EUR<br />
+DONE<br />
 
 PSEUDO CODE:
-[O] console.log(Hier hast du Kaffee: [Crema, Espresso, Latte, Frappuccino])
-[I] readline sync => Kaffe jetzt, sag mir welchen: const coffee = "Crema"
-[OP] IF NOT coffee im Array von Coffee Objects
-    [O] console.log(Gibts nicht! Geht nicht!)
-	[OP] process.exit()
-[OP] Checke was der Crema kostet => coffee.price
-[O] console.logge den Coffee Price (coffee.price)
-[I] IF amount von User kleiner als < Coffee price
-    [O] console.log(Reicht nicht! Raus hier)
-	[OP] process.exit()
-[O] console.log(Hier, Kaffee: 🍜)
-[O] console.log(Dein Wechselgeld, buddy: ${amount-coffeePrice} EUR)
-DONE
+
+[O] console.log(Hier hast du Kaffee: [Crema, Espresso, Latte, Frappuccino])<br />
+[I] readline sync => Kaffe jetzt, sag mir welchen (=> const coffee = "Crema")<br />
+[OP] IF NOT coffee im Array von Coffee Objects<br />
+    [O] console.log(Gibts nicht! Geht nicht!)<br />
+	[OP] process.exit()<br />
+[OP] Checke was der Crema kostet => coffee.price<br />
+[O] console.logge den Coffee Price (coffee.price)<br />
+[I] IF amount von User kleiner als < Coffee price<br />
+    [O] console.log(Reicht nicht! Raus hier)<br />
+	[OP] process.exit()<br />
+[O] console.log(Hier, Kaffee: 🍜)<br />
+[O] console.log(Dein Wechselgeld, buddy: ${amount-coffeePrice} EUR)<br />
+DONE<br />
 
 Schreib dieses Programm und werde glücklich!
